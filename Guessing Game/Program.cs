@@ -13,24 +13,28 @@ namespace Guessing_Game
             int guessLimit = 3;
             bool outOfGuesses = false;
 
-            while(guess != secretWord && !outOfGuesses)
+            while (guess != secretWord && !outOfGuesses)
             {
-                if(guessCount < guessLimit){
-                Console.Write("Enter guess: ");
-                Console.Write("Number of attempts: " + guessCount);
-                guess = Console.ReadLine();
-                guessCount ++;
-                } else
+                if (guessCount < guessLimit)
+                {
+                    Console.Write("Number of attempts: " + guessCount + " ");
+                    Console.Write("Enter guess: ");
+                    guess = Console.ReadLine();
+                    guessCount++;
+                }
+                else
                 {
                     outOfGuesses = true;
                 }
 
             }
-            if(outOfGuesses)
+            if (outOfGuesses)
             {
-            Console.Write("You Lose!");
-            } else {
-            Console.Write("You Win!");
+                Console.Write("You Lose!");
+            }
+            else
+            {
+                Console.Write("You Win!");
             }
 
             Console.ReadLine();
