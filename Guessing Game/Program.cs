@@ -10,13 +10,14 @@ namespace Guessing_Game
             string secretWord = "giraffe";
             string guess = "";
             int guessCount = 0;
-            int guessLimt = 3;
+            int guessLimit = 3;
             bool outOfGuesses = false;
 
             while(guess != secretWord && !outOfGuesses)
             {
                 if(guessCount < guessLimit){
-                Console.Write("Enter guess: " + guessCount);
+                Console.Write("Enter guess: ");
+                Console.Write("Number of attempts: " + guessCount);
                 guess = Console.ReadLine();
                 guessCount ++;
                 } else
