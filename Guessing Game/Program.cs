@@ -16,7 +16,7 @@ namespace Guessing_Game
             while(guess != secretWord && !outOfGuesses)
             {
                 if(guessCount < guessLimit){
-                Console.Write("Enter guess: ");
+                Console.Write("Enter guess: " + guessCount);
                 guess = Console.ReadLine();
                 guessCount ++;
                 } else
